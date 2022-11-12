@@ -16,8 +16,22 @@ public class Array {
                 input[i] = count;
             }
         }
+        showArray(input);
     }
 
+    static void showArray(int[] input) {
+        System.out.print("[");
+        for (int element : input) {
+            System.out.print(element +", ");
+        }
+        System.out.println("]");
+    }
+
+    static void fillInReverse(int[] input) {
+        for (int i = input.length - 1; i >= 0; i--) {
+            input[i] = new Random().nextInt(109);
+        }
+    }
     public static void main(String[] args) {
         int[] array1 = {23, 45, 67};
         int[] array2 = {90, 68};
@@ -28,5 +42,8 @@ public class Array {
         System.out.println(Arrays.toString(array1));
         System.out.println(Arrays.toString(array2));
         System.out.println(Arrays.toString(array3));
+        showArray(array1);
+        fillInReverse(array1);
+        showArray(array1);
     }
 }
