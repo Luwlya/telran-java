@@ -32,6 +32,15 @@ public class Array {
             input[i] = new Random().nextInt(109);
         }
     }
+
+    static void fillTwoOverTwo(int[] input) {
+        for (int i = 0; i < input.length; i++) {
+            if (i % 4 < 2) {
+                input[i] = new Random().nextInt(109);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] array1 = {23, 45, 67};
         int[] array2 = {90, 68};
@@ -45,5 +54,8 @@ public class Array {
         showArray(array1);
         fillInReverse(array1);
         showArray(array1);
+        int[] array4 = new int[21];
+        fillTwoOverTwo(array4);
+        System.out.println(Arrays.toString(array4));
     }
 }
