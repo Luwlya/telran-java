@@ -66,7 +66,19 @@ public class Array {
         }
     }
 
-
+    static void fillInFromBothSides(int[] input){
+        int indexStart = 0;
+        int indexEnd = input.length - 1;
+        int value = 0;
+        while (indexStart <= indexEnd){
+            input[indexStart] = value;
+            indexStart++;
+            value++;
+            input[indexEnd] = value;
+            indexEnd--;
+            value++;
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -91,5 +103,8 @@ public class Array {
         int[] array6 = new int[15];
         fillInEven(array6);
         System.out.println(Arrays.toString(array6));
+        int[] array7 = new int[7];
+        fillInFromBothSides(array7);
+        System.out.println(Arrays.toString(array7));
     }
 }
