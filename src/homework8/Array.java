@@ -43,20 +43,6 @@ public class Array {
             }
         }
     }
-    static void fillInMore(int[] input) {
-        int cycleLength = 1;
-        int step = 0;
-        for (int i = 0; i < input.length; i++) {
-            if (step < cycleLength){
-                input[i] = random.nextInt(109);
-                step++;
-            } else {
-                step = 0;
-                i+= cycleLength - 1;
-                cycleLength++;
-            }
-        }
-    }
 
     static void fillInEven(int[] input){
         int index = 0;
@@ -97,9 +83,6 @@ public class Array {
         int[] array4 = new int[21];
         fillTwoOverTwo(array4);
         System.out.println(Arrays.toString(array4));
-        int[] array5 = new int[31];
-        fillInMore(array5);
-        System.out.println(Arrays.toString(array5));
         int[] array6 = new int[15];
         fillInEven(array6);
         System.out.println(Arrays.toString(array6));
