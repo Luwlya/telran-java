@@ -3,30 +3,15 @@ package homework8;
 import java.util.Arrays;
 import java.util.Random;
 
-/*
- len = 3:
- fill with random
-
- len < 3:
- fill with even random
-
- len > 3:
- in:  3 1 1 2 5
- out: 3 4 5 7 12
-*/
 public class Array {
     static void process(int[] input) {
-        if (input.length == 3) {
-            for (int i = 0; i < input.length; i++) {
+        int count = 0;
+        for (int i = 0; i < input.length; i++) {
+            if (input.length == 3) {
                 input[i] = new Random().nextInt(109);
-            }
-        } else if (input.length < 3) {
-            for (int i = 0; i < input.length; i++) {
+            } else if (input.length < 3) {
                 input[i] = new Random().nextInt(109) * 2;
-            }
-        } else{
-            int count = 0;
-            for (int i = 0; i < input.length; i++) {
+            } else {
                 count = count + input[i];
                 input[i] = count;
             }
