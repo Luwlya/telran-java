@@ -3,15 +3,15 @@ package calculator;
 import java.util.Scanner;
 
 public class Calculator {
-    static int calculate(int first, String action, int second) {
+    static int calculate(int first, char action, int second) {
         int result = 0;
-        if (action.equals("+")) {
+        if (action == '+') {
             result = first + second;
-        } else if (action.equals("-")) {
+        } else if (action == '-') {
             result = first - second;
-        } else if (action.equals("*")) {
+        } else if (action == '*') {
             result = first * second;
-        } else if (action.equals("/")) {
+        } else if (action == '/') {
             result = first / second;
         } else {
             System.out.println("Wrong action: " + action);
@@ -19,15 +19,15 @@ public class Calculator {
         return result;
     }
 
-    static int calculateInSwitch(int first, String action, int second) {
+    static int calculateInSwitch(int first, char action, int second) {
         switch (action) {
-            case "+":
+            case '+':
                 return first + second;
-            case "-":
+            case '-':
                 return first - second;
-            case "*":
+            case '*':
                 return first * second;
-            case "/":
+            case '/':
                 return first / second;
             default:
                 System.out.println("Wrong action: " + action);
@@ -36,10 +36,10 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             int first = scanner.nextInt();
-            String action = scanner.next();
+            char action = scanner.next().charAt(0);
             int second = scanner.nextInt();
             int result = calculateInSwitch(first, action, second);
             System.out.println(result);
