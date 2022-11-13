@@ -20,24 +20,19 @@ public class Calculator {
     }
 
     static int calculateInSwitch(int first, String action, int second) {
-        int result = 0;
         switch (action) {
             case "+":
-                result = first + second;
-                break;
+                return first + second;
             case "-":
-                result = first - second;
-                break;
+                return first - second;
             case "*":
-                result = first * second;
-                break;
+                return first * second;
             case "/":
-                result = first / second;
-                break;
+                return first / second;
             default:
                 System.out.println("Wrong action: " + action);
+                return 0;
         }
-        return result;
     }
 
     public static void main(String[] args) {
