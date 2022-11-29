@@ -1,5 +1,7 @@
 package projectFirma.model;
 
+import projectFirma.model.face.HasDirectReports;
+
 import java.time.LocalDate;
 
 public class TopManager extends Employee implements HasDirectReports {

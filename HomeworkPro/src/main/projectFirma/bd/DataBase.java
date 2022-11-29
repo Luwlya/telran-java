@@ -1,6 +1,6 @@
 package projectFirma.bd;
 
-import projectFirma.model.Employee;
+import main.projectFirma.model.Employee;
 
 import java.util.ArrayList;
 import java.util.List;

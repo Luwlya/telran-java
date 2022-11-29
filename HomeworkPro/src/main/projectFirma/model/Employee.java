@@ -2,11 +2,17 @@ package projectFirma.model;
 
 import java.time.LocalDate;
 
-public abstract class Employee {
+public abstract class Employee implements Comparable<Employee> {
     private String name;
     private String email;
     private Role role;
     private LocalDate startDate;
+
+    @Override
+    public int compareTo(Employee other) {
+        int result = this.name.compareTo(other.name);
+        return result != 0 ? result : this.startDate.compareTo(other.startDate);
+    }
 
     public Employee(String name, String email, Role role, LocalDate startDate) {
         this.name = name;
@@ -30,4 +36,6 @@ public abstract class Employee {
     public LocalDate getStartDate() {
         return startDate;
     }
+
+
 }
